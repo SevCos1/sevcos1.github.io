@@ -111,25 +111,6 @@
 												#carte-voyages img { max-width: none; }
 											</style>
 											<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-												<script>
-													var carte = L.map('carte-voyages').setView([30, 0], 2);
-
-													L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-														maxZoom: 18,
-														attribution: '&copy; contributeurs OpenStreetMap'
-													}).addTo(carte);
-
-													var voyages = [
-														{ nom: "Québec, Canada", lat: 46.8139, lng: -71.2080, texte: "Ma ville" },
-														{ nom: "Paris, France", lat: 48.8566, lng: 2.3522, texte: "Voyage en 2023" },
-														{ nom: "Cancún, Mexique", lat: 21.1619, lng: -86.8515, texte: "Voyage en 2024" }
-													];
-
-													voyages.forEach(function (v) {
-														L.marker([v.lat, v.lng]).addTo(carte)
-															.bindPopup("<strong>" + v.nom + "</strong><br>" + v.texte);
-													});
-												</script>
 									</header>
 									<p>Voyager me permet de découvrir de nouvelles cultures et de sortir de ma zone de confort. Voici une carte des endroits que j'ai visités. Cliquez sur un marqueur pour en savoir plus.</p>
 									<div id="carte-voyages"></div>
@@ -216,6 +197,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+												<script>
+													var carte = L.map('carte-voyages').setView([30, 0], 2);
 
+													L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+														maxZoom: 18,
+														attribution: '&copy; contributeurs OpenStreetMap'
+													}).addTo(carte);
+
+													var voyages = [
+														{ nom: "Québec, Canada", lat: 46.8139, lng: -71.2080, texte: "Ma ville" },
+														{ nom: "Paris, France", lat: 48.8566, lng: 2.3522, texte: "Voyage en 2023" },
+														{ nom: "Cancún, Mexique", lat: 21.1619, lng: -86.8515, texte: "Voyage en 2024" }
+													];
+
+													voyages.forEach(function (v) {
+														L.marker([v.lat, v.lng]).addTo(carte)
+															.bindPopup("<strong>" + v.nom + "</strong><br>" + v.texte);
+													});
+												</script>
 	</body>
 </html>
