@@ -112,7 +112,7 @@
 											</style>
 											<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 									</header>
-									<p>Voyager me permet de découvrir de nouvelles cultures et de sortir de ma zone de confort. Voici une carte des endroits que j'ai visités. Cliquez sur un marqueur pour en savoir plus.</p>
+									<p>Ici une carte de mes voyages ! C'est pas tant pertinant, mais j'aime bien le visuel. Vous pouvez cliquer sur un marqueur pour y trouver ma date de passage et mon appréciation sur 10.</p>
 									<div id="carte-voyages"></div>
 								</div>
 							</section>
@@ -207,19 +207,21 @@
 						}).addTo(carte);
 
 						var voyages = [
-							{ nom: "Québec, Canada", lat: 46.8139, lng: -71.2080, texte: "Ma ville" },
-							{ nom: "Paris, France", lat: 48.8566, lng: 2.3522, texte: "Voyage en 2018" },
-							{ nom: "Samana, République Dominicaine", lat: 19.2056, lng: -69.3369, texte: "Voyage en 2019 et 2023" },
-							{ nom: "Madrid", lat: 40.416775, lng: -3.703790, texte: "Échange 2025" },
-							{ nom: "Berlin", lat: 52.520008, lng: 13.404954, texte: "Échange 2025" },
-							{ nom: "Strasbourg", lat: 48.5839, lng: 7.7455, texte: "Échange 2025" },
-							{ nom: "Londres", lat: 51.50735, lng: -0.12776, texte: "Échange 2025" },
-							{ nom: "Marrakesh", lat: 31.6286, lng: -7.9920, texte: "Échange 2025" },
-							{ nom: "Grenade", lat: 37.1773, lng: -3.5986, texte: "Échange 2025" },
-							{ nom: "Lisbonne", lat: 38.7223, lng: -9.1393, texte: "Échange 2025" },
-							{ nom: "Barcelone", lat: 41.3879, lng: 2.1699, texte: "Échange 2025" },
-							{ nom: "Saskatoon", lat: 52.146973, lng: -106.647034, texte: "Voyage en 2019" },
-							{ nom: "Basel", lat: 47.5596, lng: 7.5886, texte: "Échange 2025" }
+							{ nom: "Québec, Québec", lat: 46.8139, lng: -71.2080, texte: "Ma ville actuelle. 6/10" },
+							{ nom: "Montréal, Québec", lat: 45,50884, lng: -73,58781, texte: "Ma ville de 2021 à 2026. 10/10" },
+							{ nom: "Saint-André-Avellin, Québec", lat: 45,72389, lng: -75,05556, texte: "Mon village de 2007 à 2021, et depuis à chaque été. 8/10" },
+							{ nom: "Paris, France", lat: 48.8566, lng: 2.3522, texte: "Voyage en 2018. 8/10" },
+							{ nom: "Samana, République Dominicaine", lat: 19.2056, lng: -69.3369, texte: "Voyage en 2019 et 2023. 5/10" },
+							{ nom: "Madrid, Espagne", lat: 40.416775, lng: -3.703790, texte: "Échange d'août à décembre 2025. 10/10" },
+							{ nom: "Berlin, Allemagne", lat: 52.520008, lng: 13.404954, texte: "Voyage en novembre 2025. 10/10" },
+							{ nom: "Strasbourg, France", lat: 48.5839, lng: 7.7455, texte: "Voyage en novembre 2025. 8/10" },
+							{ nom: "Londres, Angleterre", lat: 51.50735, lng: -0.12776, texte: "Voyage en octobre 2025. 7/10" },
+							{ nom: "Marrakesh, Maroc", lat: 31.6286, lng: -7.9920, texte: "Voyage en décembre 2025. 6/10" },
+							{ nom: "Grenade, Espagne", lat: 37.1773, lng: -3.5986, texte: "Voyage en septembre 2025. 9/10" },
+							{ nom: "Lisbonne, Portugal", lat: 38.7223, lng: -9.1393, texte: "Voyage en septembre 2025. 9/10" },
+							{ nom: "Barcelone, Catalogne", lat: 41.3879, lng: 2.1699, texte: "Voyage en octobre 2025. 8/10" },
+							{ nom: "Saskatoon, Canada", lat: 52.146973, lng: -106.647034, texte: "Voyage en 2019. 3/10" },
+							{ nom: "Basel, Suisse", lat: 47.5596, lng: 7.5886, texte: "Voyage en novembre 2025. 5/10" }
 						];
 
 						voyages.forEach(function (v) {
