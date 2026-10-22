@@ -197,34 +197,35 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-												<script>
-													var carte = L.map('carte-voyages').setView([30, 0], 2);
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+					<script>
+						var carte = L.map('carte-voyages').setView([30, 0], 2);
 
-													L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-														maxZoom: 18,
-														attribution: '&copy; contributeurs OpenStreetMap'
-													}).addTo(carte);
+						L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+							maxZoom: 18,
+							attribution: '&copy; contributeurs OpenStreetMap'
+						}).addTo(carte);
 
-													var voyages = [
-														{ nom: "Québec, Canada", lat: 46.8139, lng: -71.2080, texte: "Ma ville" },
-														{ nom: "Paris, France", lat: 48.8566, lng: 2.3522, texte: "Voyage en 2018" },
-														{ nom: "Samana, République Dominicaine", lat: 19.2056, lng: -69.3369, texte: "Voyage en 2019 et 2023" }
-														{ nom: "Madrid", lat: 40.416775, lng: -3.703790, texte: "Échange 2025" }
-														{ nom: "Berlin", lat: 52.520008, lng: 13.404954, texte: "Échange 2025" }
-														{ nom: "Strasbourg", lat: 48.5839, lng: 7.7455, texte: "Échange 2025" }
-														{ nom: "Londres", lat: 51,50735, lng: -0,12776, texte: "Échange 2025" }
-														{ nom: "Marrakesh", lat: 31,6286, lng: -7,9920, texte: "Échange 2025" }
-														{ nom: "Grenade", lat: 37.1773, lng: -3.5986, texte: "Échange 2025" }
-														{ nom: "Lisbonne", lat: 38.7223, lng: -9.1393, texte: "Échange 2025" }
-														{ nom: "Barcelone", lat: 41,3879, lng: 2,1699, texte: "Échange 2025" }
-														{ nom: "Saskatoon", lat: 52.146973, lng: -106.6470340, texte: "Voyage en 2019" }
-														{ nom: "Basel", lat: 47.5596, lng: 7.5886, texte: "Échange 2025" }
-													];
+						var voyages = [
+							{ nom: "Québec, Canada", lat: 46.8139, lng: -71.2080, texte: "Ma ville" },
+							{ nom: "Paris, France", lat: 48.8566, lng: 2.3522, texte: "Voyage en 2018" },
+							{ nom: "Samana, République Dominicaine", lat: 19.2056, lng: -69.3369, texte: "Voyage en 2019 et 2023" },
+							{ nom: "Madrid", lat: 40.416775, lng: -3.703790, texte: "Échange 2025" },
+							{ nom: "Berlin", lat: 52.520008, lng: 13.404954, texte: "Échange 2025" },
+							{ nom: "Strasbourg", lat: 48.5839, lng: 7.7455, texte: "Échange 2025" },
+							{ nom: "Londres", lat: 51.50735, lng: -0.12776, texte: "Échange 2025" },
+							{ nom: "Marrakesh", lat: 31.6286, lng: -7.9920, texte: "Échange 2025" },
+							{ nom: "Grenade", lat: 37.1773, lng: -3.5986, texte: "Échange 2025" },
+							{ nom: "Lisbonne", lat: 38.7223, lng: -9.1393, texte: "Échange 2025" },
+							{ nom: "Barcelone", lat: 41.3879, lng: 2.1699, texte: "Échange 2025" },
+							{ nom: "Saskatoon", lat: 52.146973, lng: -106.647034, texte: "Voyage en 2019" },
+							{ nom: "Basel", lat: 47.5596, lng: 7.5886, texte: "Échange 2025" }
+						];
 
-													voyages.forEach(function (v) {
-														L.marker([v.lat, v.lng]).addTo(carte)
-															.bindPopup("<strong>" + v.nom + "</strong><br>" + v.texte);
-													});
-												</script>
+						voyages.forEach(function (v) {
+							L.marker([v.lat, v.lng]).addTo(carte)
+								.bindPopup("<strong>" + v.nom + "</strong><br>" + v.texte);
+						});
+					</script>
 	</body>
 </html>
