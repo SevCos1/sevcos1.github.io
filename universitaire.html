@@ -11,6 +11,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+	.bloc { background-color: var(--couleur, #2e3450); color: var(--texte, #fff); padding: 4em 0; }
+	.bloc .contenu { max-width: 65em; margin: 0 auto; padding: 0 2em; }
+	.bloc h2, .bloc h3 { color: var(--texte, #fff); }
+
+	/* Ligne du temps */
+	.timeline { display: flex; gap: 2em; margin: 3em 0 0; padding: 0; list-style: none; }
+	.timeline li { flex: 1; position: relative; padding: 2em 0 0 0; border-top: 3px solid rgba(255,255,255,.35); }
+	.timeline li::before { content: ""; position: absolute; top: -9px; left: 0; width: 15px; height: 15px; border-radius: 50%; background: var(--texte, #fff); }
+	.timeline .annees { font-size: .8em; letter-spacing: .1em; text-transform: uppercase; opacity: .7; }
+	.timeline h3 { margin: .3em 0; }
+	.timeline p { margin: 0; }
+
+	/* Cartes (cours et travaux) */
+	.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); gap: 1.5em; margin-top: 2em; }
+	.carte { background: rgba(255,255,255,.08); padding: 1.5em; border-radius: 6px; }
+	.carte h3 { margin-bottom: .3em; }
+	.carte .sous-titre { font-size: .8em; opacity: .7; margin-bottom: 1em; }
+	.carte p { margin: 0; }
+
+	/* Photos */
+	.photos { display: flex; gap: 1em; flex-wrap: wrap; margin-top: 2.5em; }
+	.photos img { flex: 1 1 14em; max-width: 100%; height: 16em; object-fit: cover; border-radius: 6px; }
+
+	@media (max-width: 736px) {
+		.timeline { flex-direction: column; gap: 1.5em; }
+		.timeline li { border-top: 0; border-left: 3px solid rgba(255,255,255,.35); padding: 0 0 0 1.5em; }
+		.timeline li::before { top: .3em; left: -9px; }
+	}
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -45,7 +75,7 @@
 
 				<!-- Banner -->
 				<!-- Note: The "styleN" class below should match that of the header element. -->
-					<section id="banner" class="style2">
+					<section id="banner" class="style1">
 						<div class="inner">
 							<span class="image">
 								<img src="images/pic07.jpg" alt="" />
@@ -60,85 +90,85 @@
 						</div>
 					</section>
 
-				<!-- Main -->
-					<div id="main">
+				<!-- Parcours -->
+					<section class="bloc" style="--couleur: #2e3450;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Mon parcours</h2>
+							</header>
+							<p>Une courte phrase pour présenter ton cheminement scolaire.</p>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>Sed amet aliquam</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+							<ul class="timeline">
+								<li>
+									<span class="annees">2021 – 2023</span>
+									<h3>Cégep</h3>
+									<p>Bois-de-Boulogne<br>Histoire et civilisation</p>
+								</li>
+								<li>
+									<span class="annees">2023 – 2026</span>
+									<h3>Baccalauréat</h3>
+									<p>Université de Montréal<br>Études internationales</p>
+								</li>
+								<li>
+									<span class="annees">2026 – aujourd'hui</span>
+									<h3>Maîtrise</h3>
+									<p>Université Laval<br>Études internationales - Diplomatie</p>
+								</li>
+							</ul>
+
+							<div class="photos">
+								<img src="images/photo_parcours1.jpg" alt="Description de la photo" />
+								<img src="images/photo_parcours2.jpg" alt="Description de la photo" />
+							</div>
+						</div>
+					</section>
+
+					<!-- Cours préférés -->
+					<section class="bloc" style="--couleur: #3d4f6e;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Les cours qui m'ont le plus marquée</h2>
+							</header>
+							<div class="cartes">
+								<div class="carte">
+									<h3>Nom du cours</h3>
+									<p class="sous-titre">Sigle · Session et année</p>
+									<p>Ce que ce cours m'a appris et pourquoi il m'a marquée.</p>
 								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
+								<div class="carte">
+									<h3>Nom du cours</h3>
+									<p class="sous-titre">Sigle · Session et année</p>
+									<p>Ce que ce cours m'a appris et pourquoi il m'a marquée.</p>
 								</div>
-							</section>
+								<div class="carte">
+									<h3>Nom du cours</h3>
+									<p class="sous-titre">Sigle · Session et année</p>
+									<p>Ce que ce cours m'a appris et pourquoi il m'a marquée.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-					</div>
+					<!-- Travaux importants -->
+					<section class="bloc" style="--couleur: #4a3f66;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Mes travaux les plus importants</h2>
+							</header>
+							<div class="cartes">
+								<div class="carte">
+									<h3>Titre du travail</h3>
+									<p class="sous-titre">Cours · Année</p>
+									<p>En quelques phrases : le sujet, ta contribution et ce que tu en retiens.</p>
+								</div>
+								<div class="carte">
+									<h3>Titre du travail</h3>
+									<p class="sous-titre">Cours · Année</p>
+									<p>En quelques phrases : le sujet, ta contribution et ce que tu en retiens.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
 				<!-- Contact -->
 					<section id="contact">
