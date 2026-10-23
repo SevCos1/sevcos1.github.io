@@ -2831,27 +2831,27 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #6fc3df;
+				background-color: #f6f3cf;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+				background-color: #8b162b;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+				background-color: #f9b6b8;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+				background-color: #bad2e8;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+				background-color: #a8b92e;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				background-color: #f37521;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3503,11 +3503,11 @@ input, select, textarea {
 		}
 
 		#banner.style4:after {
-			background-color: #a8b92e;
+			background-color: #bad2e8;
 		}
 
 		#banner.style5:after {
-			background-color: #bad2e8;
+			background-color: #a8b92e;
 		}
 
 		#banner.style6:after {
