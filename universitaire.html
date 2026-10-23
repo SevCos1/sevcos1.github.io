@@ -26,8 +26,7 @@
 
 	/* Cartes (cours et travaux) */
 	.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); gap: 1.5em; margin-top: 2em; }
-	.carte { background: rgba(255,255,255,.08); padding: 1.5em; border-radius: 6px; }
-	.carte h3 { margin-bottom: .3em; }
+	.carte { background: var(--carte, rgba(255,255,255,.08)); padding: 1.5em; border-radius: 6px; }	.carte h3 { margin-bottom: .3em; }
 	.carte .sous-titre { font-size: .8em; opacity: .7; margin-bottom: 1em; }
 	.carte p { margin: 0; }
 
@@ -181,8 +180,7 @@
 					</section>
 
 					<!-- Travaux importants -->
-					<section class="bloc" style="--couleur: #f6f3cf; --texte: #1a2a5e;">
-						<div class="contenu">
+						<section class="bloc" style="--couleur: #f6f3cf; --texte: #1a2a5e; --carte: rgba(26,42,94,.08);">						<div class="contenu">
 							<header class="major">
 								<h2>Travaux de recherches pertinents</h2>
 							</header>
