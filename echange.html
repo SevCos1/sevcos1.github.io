@@ -11,6 +11,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+	.bloc { background-color: var(--couleur, #c0392b); color: var(--texte, #fff); padding: 4em 0; }
+	.bloc .contenu { max-width: 65em; margin: 0 auto; padding: 0 2em; }
+	.bloc h2, .bloc h3 { color: var(--texte, #fff); }
+	.bloc header.major::after, .bloc header.major h2::after { border-color: var(--texte, #fff) !important; background-color: var(--texte, #fff) !important; }
+
+	.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); gap: 1.5em; margin-top: 2em; }
+	.carte { background: var(--carte, rgba(255,255,255,.12)); padding: 1.5em; border-radius: 8px; position: relative; }
+	.carte h3 { margin-bottom: .3em; }
+	.carte .sous-titre { font-size: .8em; opacity: .75; margin-bottom: 1em; }
+	.carte p { margin: 0; }
+	.carte .emoji { font-size: 2em; display: block; margin-bottom: .2em; }
+
+	.note { display: inline-block; margin-top: 1em; padding: .2em .8em; border-radius: 999px; font-weight: 600; font-size: .85em; background: var(--texte, #fff); color: var(--couleur, #c0392b); }
+
+	.photos { display: flex; gap: 1em; flex-wrap: wrap; margin-top: 2.5em; }
+	.photos figure { flex: 1 1 14em; margin: 0; }
+	.photos img { width: 100%; height: 16em; object-fit: cover; border-radius: 8px; }
+	.photos figcaption { font-size: .85em; font-style: italic; margin-top: .5em; opacity: .85; }
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -55,85 +75,156 @@
 						</div>
 					</section>
 
-				<!-- Main -->
-					<div id="main">
+				<!-- Intro -->
+					<section class="bloc" style="--couleur: #c0392b;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Bienvenue à Madrid (prévoyez une sieste)</h2>
+							</header>
+							<p>Août à décembre 2025 : cinq mois à l'Universidad Carlos III de Madrid. Au programme, des cours, des voyages, des tapas à des heures où je dînerais normalement trois fois, et une remise en question de mon rapport à la ponctualité.</p>
+							<p>Petit rappel : tout a commencé parce que j'ai remis mon dossier pour Prague avec une heure de retard. Merci, Madrid, d'avoir été le plan B qui est devenu le plan A.</p>
 
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>Sed amet aliquam</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+							<div class="photos">
+								<figure>
+									<img src="images/madrid1.jpg" alt="Description de la photo" />
+									<figcaption>Légende drôle de la photo 1</figcaption>
+								</figure>
+								<figure>
+									<img src="images/madrid2.jpg" alt="Description de la photo" />
+									<figcaption>Légende drôle de la photo 2</figcaption>
+								</figure>
+							</div>
+						</div>
+					</section>
+
+					<!-- Fun facts -->
+					<section class="bloc" style="--couleur: #f6e7a1; --texte: #5a1a14; --carte: rgba(90,26,20,.08);">
+						<div class="contenu">
+							<header class="major">
+								<h2>Fun facts (vérifiés par moi-même)</h2>
+							</header>
+							<div class="cartes">
+								<div class="carte">
+									<span class="emoji">😴</span>
+									<h3>La sieste est sacrée</h3>
+									<p>Ajoute ici ton constat sur les siestes de 14 h et le choc culturel que ça a été.</p>
 								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
+								<div class="carte">
+									<span class="emoji">🍽️</span>
+									<h3>Souper à 22 h</h3>
+									<p>Ajoute une anecdote sur les heures de repas espagnoles.</p>
 								</div>
-							</section>
+								<div class="carte">
+									<span class="emoji">🗣️</span>
+									<h3>Mon espagnol</h3>
+									<p>Raconte ta pire (ou meilleure) situation de communication.</p>
+								</div>
+								<div class="carte">
+									<span class="emoji">🚇</span>
+									<h3>Le métro de Madrid</h3>
+									<p>Ajoute ta meilleure anecdote de transport.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 
-					</div>
+					<!-- Cours -->
+					<section class="bloc" style="--couleur: #e67e22;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Les cours (oui, j'allais en classe)</h2>
+							</header>
+							<div class="cartes">
+								<div class="carte">
+									<h3>Gender inequities</h3>
+									<p class="sous-titre">Automne 2025</p>
+									<p>Ce que ce cours m'a appris, en une ou deux phrases, avec une touche d'humour.</p>
+								</div>
+								<div class="carte">
+									<h3>Nom du cours</h3>
+									<p class="sous-titre">Automne 2025</p>
+									<p>Ce que ce cours m'a appris, en une ou deux phrases.</p>
+								</div>
+								<div class="carte">
+									<h3>Nom du cours</h3>
+									<p class="sous-titre">Automne 2025</p>
+									<p>Ce que ce cours m'a appris, en une ou deux phrases.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Voyages -->
+					<section class="bloc" style="--couleur: #922b21;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Mes escapades (notées sur 10, évidemment)</h2>
+							</header>
+							<div class="cartes">
+								<div class="carte">
+									<h3>Lisbonne</h3>
+									<p class="sous-titre">Septembre 2025</p>
+									<p>Ton commentaire sur Lisbonne.</p>
+									<span class="note">9/10</span>
+								</div>
+								<div class="carte">
+									<h3>Grenade</h3>
+									<p class="sous-titre">Septembre 2025</p>
+									<p>Ton commentaire sur Grenade.</p>
+									<span class="note">9/10</span>
+								</div>
+								<div class="carte">
+									<h3>Londres</h3>
+									<p class="sous-titre">Octobre 2025</p>
+									<p>Ton commentaire sur Londres.</p>
+									<span class="note">7/10</span>
+								</div>
+								<div class="carte">
+									<h3>Barcelone</h3>
+									<p class="sous-titre">Octobre 2025</p>
+									<p>Ton commentaire sur Barcelone.</p>
+									<span class="note">8/10</span>
+								</div>
+								<div class="carte">
+									<h3>Berlin</h3>
+									<p class="sous-titre">Novembre 2025</p>
+									<p>Ton commentaire sur Berlin.</p>
+									<span class="note">10/10</span>
+								</div>
+								<div class="carte">
+									<h3>Strasbourg</h3>
+									<p class="sous-titre">Novembre 2025</p>
+									<p>Ton commentaire sur Strasbourg.</p>
+									<span class="note">8/10</span>
+								</div>
+								<div class="carte">
+									<h3>Basel</h3>
+									<p class="sous-titre">Novembre 2025</p>
+									<p>Ton commentaire sur Basel.</p>
+									<span class="note">5/10</span>
+								</div>
+								<div class="carte">
+									<h3>Marrakesh</h3>
+									<p class="sous-titre">Décembre 2025</p>
+									<p>Ton commentaire sur Marrakesh.</p>
+									<span class="note">6/10</span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Mot de la fin -->
+					<section class="bloc" style="--couleur: #f6e7a1; --texte: #5a1a14;">
+						<div class="contenu">
+							<header class="major">
+								<h2>Le mot de la fin</h2>
+							</header>
+							<p>Ce que cet échange t'a apporté, avec un dernier trait d'humour. Hasta luego, Madrid !</p>
+							<ul class="actions">
+								<li><a href="index.html" class="button">Retour à l'accueil</a></li>
+							</ul>
+						</div>
+					</section>
 
 								<!-- Contact -->
 					<section id="contact">
