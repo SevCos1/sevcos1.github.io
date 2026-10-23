@@ -40,11 +40,27 @@
 		.timeline li::before { top: .3em; left: -9px; }
 	}
 	/* Texte du banner en bleu foncé */
-#banner h1,
-#banner p,
-#banner .content p {
-	color: #0e152c !important;
-}
+	#banner h1,
+	#banner p,
+	#banner .content p {
+		color: #0e152c !important;
+	}
+	/* Lignes du banner en bleu foncé */
+	#banner h1::after,
+	#banner header.major::after,
+	#banner .content::before,
+	#banner .content::after {
+		border-color: #1a2a5e !important;
+		background-color: #1a2a5e !important;
+	}
+	/* Les lignes sous les titres suivent la couleur du texte de la section */
+	.bloc header.major::after,
+	.bloc header.major h2::after,
+	.bloc header.major h3::after,
+	.bloc .carte h3::after {
+		border-color: var(--texte, #fff) !important;
+		background-color: var(--texte, #fff) !important;
+	}
 </style>
 	</head>
 	<body class="is-preload">
